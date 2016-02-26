@@ -1,1 +1,1 @@
-web: bundle exec puma -C config/puma.rbbundle exec rake db:migrate:reset
+web: bundle exec puma -C config/puma.rb

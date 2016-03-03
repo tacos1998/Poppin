@@ -1,0 +1,15 @@
+one:
+  follower: tyler
+  followed: sonic
+
+two:
+  follower: tyler
+  followed: shadow
+
+three:
+  follower: sonic
+  followed: shadow
+
+four:
+  follower: evan
+  followed: tyler

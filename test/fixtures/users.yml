@@ -6,7 +6,6 @@ tyler:
   activated: true
   activated_at: <%= Time.zone.now %>
   
-
 evan:
   name: Evan Acosta
   email: evan@example.com

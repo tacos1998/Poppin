@@ -1,0 +1,46 @@
+orange:
+  content: "I just ate an orange!"
+  created_at: <%= 10.minutes.ago %>
+  user: tyler
+
+tau_manifesto:
+  content: "Check out the @tauday site by @mhartl: http://tauday.com"
+  created_at: <%= 3.years.ago %>
+  user: tyler
+
+cat_video:
+  content: "Sad cats are sad: http://youtu.be/PKffm2uI4dk"
+  created_at: <%= 2.hours.ago %>
+  user: tyler
+
+most_recent:
+  content: "Writing a short test"
+  created_at: <%= Time.zone.now %>
+  user: tyler
+
+<% 30.times do |n| %>
+micropost_<%= n %>:
+  content: <%= Faker::Lorem.sentence(5) %>
+  created_at: <%= 42.days.ago %>
+  user: tyler
+<% end %>
+
+fast:
+  content: "gotta go fast"
+  created_at: <%= 2.years.ago %>
+  user: sonic
+
+emerald:
+  content: "TFW you can't find the 4th chaos emerald"
+  created_at: <%= 3.days.ago %>
+  user: shadow
+
+vector:
+  content: "MFW stupid croc can't find the computer room"
+  created_at: <%= 10.minutes.ago %>
+  user: shadow
+
+faster:
+  content: "gotta go faster"
+  created_at: <%= 4.hours.ago %>
+  user: sonic

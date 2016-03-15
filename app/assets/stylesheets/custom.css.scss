@@ -29,6 +29,10 @@ nav {
 
 section {
   overflow: auto;
+  .popbox {
+    position: relative;
+    top: 20px;
+  }
 }
 
 textarea {
@@ -123,7 +127,7 @@ h1 span {
 
 .title {
   position: relative;
-  top: 29px;
+  top: 20px;
 }
 
 .jumbotron h1 {

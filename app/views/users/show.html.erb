@@ -6,6 +6,7 @@
         <%= gravatar_for @user %>
         <span class="title"><%= @user.name %></span>
       </h1>
+      <%= link_to "visit my Pop Box", root_path, class: "popbox" %>
     </section>
     <section class="stats">
       <%= render 'shared/stats' %>
@@ -23,7 +24,7 @@
       <h1 class="center">Oh noes!</h1>
       <h2>
         Looks like you haven't created any pops. Head to your 
-        <%= link_to "homepage", root_path %> 
+        <%= link_to "Pop Box", root_path %> 
         and start poppin!
       </h2>
     <% end %>

@@ -16,10 +16,19 @@ $threedee-enhance: linear-gradient(to left, #18e7e4 , #fc1d37); /* W3C, IE 10+/ 
 
 /* universal */
 
-body {
-  /*padding-top: 60px;*/
-  background-image: url("moar_popcorn.jpg");
+body { 
+  background: url(moar_popcorn.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-top: 70px;
 }
+
+/* body { */
+  /*padding-top: 60px;*/
+  /*background-image: url("moar_popcorn.jpg"); */
+/*} */
 
 nav {
   img {
@@ -134,9 +143,11 @@ h1 span {
   font-size: 250px;
 }
 
-@media(max-width: 1024px) {
+/* responsive homepage logo */
+
+@media(max-width: 1199px) {
   .jumbotron h1 {
-    font-size: 60px;
+    font-size: 200px;
   }
   #coolify {
     position: relative;
@@ -147,7 +158,97 @@ h1 span {
       color: white;
       text-decoration: none;
     }
-    text-shadow: 3px 3px 1px #0bdad7, 6px 6px 1px #FC354C;
+    text-shadow: 5.6px 5.6px 1px #0bdad7, 11.2px 11.2px 1px #FC354C;
+    font-weight: bold;
+  }
+}
+
+@media(max-width: 991px) {
+  .jumbotron h1 {
+    font-size: 150px;
+  }
+  #coolify {
+    position: relative;
+    left: -4.5px;
+    color: white;
+    text-transform: uppercase;
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+    text-shadow: 4.2px 4.2px 1px #0bdad7, 8.4px 8.4px 1px #FC354C;
+    font-weight: bold;
+  }
+}
+
+@media(max-width: 650px) {
+  .jumbotron h1 {
+    font-size: 100px;
+  }
+  #coolify {
+    position: relative;
+    left: -4.5px;
+    color: white;
+    text-transform: uppercase;
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+    text-shadow: 2.8px 2.8px 1px #0bdad7, 5.6px 5.6px 1px #FC354C;
+    font-weight: bold;
+  }
+}
+
+@media(max-width: 480px) {
+  .jumbotron h1 {
+    font-size: 75px;
+  }
+  #coolify {
+    position: relative;
+    left: -4.5px;
+    color: white;
+    text-transform: uppercase;
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+    text-shadow: 2.1px 2.1px 1px #0bdad7, 4.2px 4.2px 1px #FC354C;
+    font-weight: bold;
+  }
+}
+
+@media(max-width: 350px) {
+  .jumbotron h1 {
+    font-size: 50px;
+  }
+  #coolify {
+    position: relative;
+    left: -4.5px;
+    color: white;
+    text-transform: uppercase;
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+    text-shadow: 1.4px 1.4px 1px #0bdad7, 2.8px 2.8px 1px #FC354C;
+    font-weight: bold;
+  }
+}
+
+@media(max-width: 240px) {
+  .jumbotron h1 {
+    font-size: 30px;
+  }
+  #coolify {
+    position: relative;
+    left: -4.5px;
+    color: white;
+    text-transform: uppercase;
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+    text-shadow: 0.84px 0.84px 1px #0bdad7, 1.68px 1.68px 1px #FC354C;
     font-weight: bold;
   }
 }

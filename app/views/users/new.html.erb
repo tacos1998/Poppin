@@ -1,24 +1,26 @@
 <% provide(:title, 'Sign up') %>
-<h1>Sign up</h1>
-
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user) do |f| %>
-      <%= render 'shared/error_messages', object: f.object %>
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'form-control' %>
-
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
-      <p>Connect your email with <a href="https://en.gravatar.com/">Gravatar</a> to set your profile picture.</p>
-
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
-
-      <%= f.label :password_confirmation, "Confirm Password" %>
-      <%= f.password_field :password_confirmation, class: 'form-control' %>
-
-      <%= f.submit "Let's get poppin!", class: "btn btn-primary" %>
-    <% end %>
+<div class="well">
+  <h1 id="coolify-title">Sign up</h1>
+  
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for(@user) do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form-control' %>
+  
+        <%= f.label :email %>
+        <%= f.email_field :email, class: 'form-control' %>
+        <p>Connect your email with <a href="https://en.gravatar.com/">Gravatar</a> to set your profile picture.</p>
+  
+        <%= f.label :password %>
+        <%= f.password_field :password, class: 'form-control' %>
+  
+        <%= f.label :password_confirmation, "Confirm Password" %>
+        <%= f.password_field :password_confirmation, class: 'form-control' %>
+  
+        <%= f.submit "Let's get poppin!", class: "btn btn-primary" %>
+      <% end %>
+    </div>
   </div>
 </div>

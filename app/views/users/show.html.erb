@@ -1,17 +1,17 @@
 <% provide(:title, @user.name) %>
-<div class="row">
+<div class="well row">
   <aside class="col-md-4">
     <section>
-      <h1>
+      <h1 id="coolify-title">
         <%= gravatar_for @user %>
-        <%= @user.name %>
+        <span class="title"><%= @user.name %></span>
       </h1>
     </section>
     <section class="stats">
       <%= render 'shared/stats' %>
     </section>
   </aside>
-  <div class="col-md-8">
+  <div class="well col-md-8">
     <%= render 'follow_form' if logged_in? %>
     <% if @user.microposts.any? %>
       <h3>Pops (<%= @user.microposts.count %>)</h3>
@@ -19,6 +19,13 @@
         <%= render @microposts %>
       </ol>
       <%= will_paginate @microposts %>
+    <% else %>
+      <h1 class="center">Oh noes!</h1>
+      <h2>
+        Looks like you haven't created any pops. Head to your 
+        <%= link_to "homepage", root_path %> 
+        and start poppin!
+      </h2>
     <% end %>
   </div>
 </div>

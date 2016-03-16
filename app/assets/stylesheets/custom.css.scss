@@ -183,6 +183,24 @@ h1 span {
 
 @media(max-width: 650px) {
   .jumbotron h1 {
+    font-size: 125px;
+  }
+  #coolify {
+    position: relative;
+    left: -4.5px;
+    color: white;
+    text-transform: uppercase;
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+    text-shadow: 3.5px 3.5px 1px #0bdad7, 7px 7px 1px #FC354C;
+    font-weight: bold;
+  }
+}
+
+@media(max-width: 550px) {
+  .jumbotron h1 {
     font-size: 100px;
   }
   #coolify {
@@ -199,9 +217,10 @@ h1 span {
   }
 }
 
+
 @media(max-width: 480px) {
   .jumbotron h1 {
-    font-size: 75px;
+    font-size: 80px;
   }
   #coolify {
     position: relative;
@@ -212,14 +231,14 @@ h1 span {
       color: white;
       text-decoration: none;
     }
-    text-shadow: 2.1px 2.1px 1px #0bdad7, 4.2px 4.2px 1px #FC354C;
+    text-shadow: 2.5px 2.5px 1px #0bdad7, 5px 5px 1px #FC354C;
     font-weight: bold;
   }
 }
 
 @media(max-width: 350px) {
   .jumbotron h1 {
-    font-size: 50px;
+    font-size: 55px;
   }
   #coolify {
     position: relative;
@@ -230,14 +249,14 @@ h1 span {
       color: white;
       text-decoration: none;
     }
-    text-shadow: 1.4px 1.4px 1px #0bdad7, 2.8px 2.8px 1px #FC354C;
+    text-shadow: 2px 2px 1px #0bdad7, 4px 4px 1px #FC354C;
     font-weight: bold;
   }
 }
 
-@media(max-width: 240px) {
+@media(max-width: 260px) {
   .jumbotron h1 {
-    font-size: 30px;
+    font-size: 40px;
   }
   #coolify {
     position: relative;
@@ -248,7 +267,7 @@ h1 span {
       color: white;
       text-decoration: none;
     }
-    text-shadow: 0.84px 0.84px 1px #0bdad7, 1.68px 1.68px 1px #FC354C;
+    text-shadow: 1.5px 1.5px 1px #0bdad7, 3px 3px 1px #FC354C;
     font-weight: bold;
   }
 }

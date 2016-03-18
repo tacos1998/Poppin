@@ -3,6 +3,8 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <%= favicon_link_tag 'pop.png' %>
+    <!-- table favicon until I can test on multiple devices -->
+    <!--<#= render 'shared/favicon' %>-->
     <title><%= full_title(yield(:title)) %></title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>

@@ -388,19 +388,20 @@ aside {
   }
 }
 
-.user_avatars_savor {
-  overflow: auto;
-  margin-top: 10px;
-  .gravatar {
-    margin: 1px 1px;
-  }
-  a {
-    padding: 0;
-  }
-}
-
 .users.follow {
   padding: 0;
+}
+
+div.user_avatars_savor.dropdown-menu {
+    min-width: 140.5px;
+}
+
+.dropdown-menu-form {
+    padding: 1px 1px 1px 1px;
+    margin: 0px 0px 0px 0px;
+    max-height: 144px;
+    max-width: 40px;
+    overflow-y: scroll;
 }
 
 /* forms */
@@ -482,6 +483,12 @@ input {
     color: $gray-light;
     display: block;
     margin-left: 60px;
+  }
+  .user_avatars_savor .gravatar {
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
   }
   .gravatar {
     float: left;

@@ -15,11 +15,11 @@
         </div>
       <% else %>
         <div class="btn-group">
-          <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown" data-target="#" aria-haspopup="true" aria-expanded="false">
             <%= pluralize(micropost.likers(User).count, "savor", "savors") %>
             <span class="caret"></span>
           </button>
-          <div class="user_avatars_savor dropdown-menu" aria-labelledby="dropdownMenu1">
+          <div class="user_avatars_savor dropdown-menu dropdown-menu-form" aria-labelledby="dropdownMenu1">
             <% micropost.likers(User).each do |user| %>
               <%= link_to gravatar_for(user, size: 30), user %>
             <% end %>

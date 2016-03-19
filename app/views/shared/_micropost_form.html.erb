@@ -28,3 +28,10 @@
     $('#chars').text(length);
   });
 </script>
+
+<script>
+  $(function(){
+    data = <%= raw User.pluck(:name).compact.to_json %>;
+    $('textarea').atwho({at:"@", 'data':data });
+});
+</script>

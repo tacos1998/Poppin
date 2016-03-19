@@ -8,7 +8,7 @@
   
   <span class="timestamp">
     Popped <%= time_ago_in_words(micropost.created_at) %> ago.
-    <span class="dropdown">
+    <span class="dropdown half">
       <% if micropost.likers(User).count == 0 %>
         <div id="like">
           <%= pluralize(micropost.likers(User).count, "savor", "savors") %>

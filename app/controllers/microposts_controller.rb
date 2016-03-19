@@ -18,6 +18,13 @@ class MicropostsController < ApplicationController
     flash[:success] = "Pop deleted"
     redirect_to request.referrer || root_url
   end
+  
+  def update
+    @micropost = Micropost.find(params[:id])
+    current_user.like!(@micropost)
+    flash[:success] = "Pop savored!"
+    redirect_to :back
+  end
 
   private
 

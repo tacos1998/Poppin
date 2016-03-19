@@ -5,11 +5,35 @@
     <%= micropost.content %>
     <%= image_tag micropost.picture.url if micropost.picture? %>
   </span>
+  
   <span class="timestamp">
     Popped <%= time_ago_in_words(micropost.created_at) %> ago.
-    <% if current_user?(micropost.user) %>
-      <%= link_to "delete", micropost, method: :delete,
-                                       data: { confirm: "You sure?" } %>
-    <% end %>
+    <span class="dropdown">
+      <% if micropost.likers(User).count == 0 %>
+        <div id="like">
+          <%= pluralize(micropost.likers(User).count, "savor", "savors") %>
+        </div>
+      <% else %>
+        <button class="btn btn-default btn-xs dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= pluralize(micropost.likers(User).count, "savor", "savors") %>
+          <span class="caret"></span>
+        </button>
+      <% end %>
+      <div class="user_avatars dropdown-menu" aria-labelledby="dropdownMenu1">
+        <% micropost.likers(User).each do |user| %>
+          <%= link_to gravatar_for(user, size: 30), user %>
+        <% end %>
+      </div>
+      <% if current_user.likes?(micropost) %>
+        <%= content_tag(:div, "Savored", class: "btn btn-xs btn-primary", disabled: true) %>
+      <% elsif (current_user != micropost.user) %>
+        <%= link_to 'Savor', micropost, action: :update, method: :put, class: "btn btn-xs btn-primary" %>
+      <% else %>
+      <% end %>
+      <% if current_user?(micropost.user) %>
+        <%= link_to "delete", micropost, method: :delete,
+                                         data: { confirm: "You sure?" } %>
+      <% end %>
+    </span>
   </span>
 </li>

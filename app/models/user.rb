@@ -18,6 +18,9 @@ class User < ActiveRecord::Base
                     uniqueness: { case_sensitive: false }
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
+  acts_as_liker
+  acts_as_mentionable
+  
   # self.per_page = 8 will limit popper index to macbook viewport height
   # Returns the hash digest of the given string.
   def User.digest(string)

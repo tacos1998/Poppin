@@ -1,15 +1,17 @@
 # Users
-User.create!(name:  "Example User",
-             email: "example@railstutorial.org",
+bob = User.create!(name:  "Example User",
+             email: "examplerz@railstutorial.org",
              password:              "foobar",
              password_confirmation: "foobar",
              admin:     true,
              activated: true,
              activated_at: Time.zone.now)
 
+pop = bob.microposts.create!(content: "hello")
+
 99.times do |n|
   name  = Faker::Name.name
-  email = "example-#{n+1}@railstutorial.org"
+  email = "examplerz-#{n+1}@railstutorial.org"
   password = "password"
   User.create!(name: name,
               email: email,
@@ -24,6 +26,7 @@ users = User.order(:created_at).take(6)
 50.times do
   content = Faker::Lorem.sentence(5)
   users.each { |user| user.microposts.create!(content: content) }
+  users.each { |user| user.like!(pop) }
 end
 
 # Following relationships

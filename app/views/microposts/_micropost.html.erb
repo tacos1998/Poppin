@@ -14,16 +14,19 @@
           <%= pluralize(micropost.likers(User).count, "savor", "savors") %>
         </div>
       <% else %>
-        <button class="btn btn-default btn-xs dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-          <%= pluralize(micropost.likers(User).count, "savor", "savors") %>
-          <span class="caret"></span>
-        </button>
+        <div class="btn-group">
+          <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= pluralize(micropost.likers(User).count, "savor", "savors") %>
+            <span class="caret"></span>
+          </button>
+          <div class="user_avatars_savor dropdown-menu" aria-labelledby="dropdownMenu1">
+            <% micropost.likers(User).each do |user| %>
+              <%= link_to gravatar_for(user, size: 30), user %>
+            <% end %>
+          </div>
+        </div>
       <% end %>
-      <div class="user_avatars dropdown-menu" aria-labelledby="dropdownMenu1">
-        <% micropost.likers(User).each do |user| %>
-          <%= link_to gravatar_for(user, size: 30), user %>
-        <% end %>
-      </div>
+      
       <% if current_user.likes?(micropost) %>
         <%= content_tag(:div, "Savored", class: "btn btn-xs btn-primary", disabled: true) %>
       <% elsif (current_user != micropost.user) %>

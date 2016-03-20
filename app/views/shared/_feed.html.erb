@@ -2,7 +2,7 @@
   <ol class="microposts" id="refreshable">
     <%= render @feed_items %>
   </ol>
-  <%= will_paginate @feed_items %>
+  <%= will_paginate @feed_items, id: "home-pagination" %>
 <% end %>
 
 <!--make feed refreshable -->

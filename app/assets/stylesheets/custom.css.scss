@@ -407,6 +407,11 @@ div.user_avatars_savor.dropdown-menu {
     overflow-y: scroll;
 }
 
+#chars {
+  padding-bottom: 4px;
+  padding-top: 0px;
+}
+
 /* forms */
 
 input, textarea, select, .uneditable-input {
@@ -414,6 +419,11 @@ input, textarea, select, .uneditable-input {
   width: 100%;
   margin-bottom: 15px;
   @include box_sizing;
+}
+
+#micropost_content {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 
 input {

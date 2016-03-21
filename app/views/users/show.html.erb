@@ -20,13 +20,16 @@
         <%= render @microposts %>
       </ol>
       <%= will_paginate @microposts, id: "kernel-pagination" %>
-    <% else %>
+    <% elsif current_user?(@user) %>
       <h1 class="center">Oh noes!</h1>
       <h2>
         Looks like you haven't Popped any Pops. Head to your 
         <%= link_to "Pop Box", root_path %> 
         and start poppin!
       </h2>
+    <% else %>
+      <h1>Oh noes!</h1>
+      <h2>This user hasn't Popped any Pops. Move along, nothing to see here.</h2>
     <% end %>
   </div>
 </div>

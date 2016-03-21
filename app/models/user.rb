@@ -82,8 +82,18 @@ class User < ActiveRecord::Base
   
   # Returns a user's status feed.
   def feed
-    Micropost.where("user_id IN (:following_ids) OR user_id = :user_id",
-                    following_ids: following_ids, user_id: id)
+    # Finds all users where the current user is the follower
+    following_ids = "SELECT followed_id FROM relationships
+                     WHERE  follower_id = :user_id"
+    Micropost.where("user_id IN (#{following_ids})
+                     OR user_id = :user_id", user_id: id)
+  end
+  
+  def like_feed
+    # Should find all likeables where the current user is the liker (but it doesn't)
+    liking_ids =     "SELECT likeable_id FROM likes 
+                     WHERE liker_id = :user_id"
+    Micropost.where("user_id IN (#{liking_ids})", user_id: id)
   end
   
   # Follows a user.

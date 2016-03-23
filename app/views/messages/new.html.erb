@@ -1,5 +1,5 @@
 <div class="well">
-  <h1>Start Conversation</h1>
+  <h1 id="coolify-title">New Nibble</h1>
   
   <%= form_tag messages_path, method: :post do %>
     <div class="form-group">
@@ -17,6 +17,6 @@
       <%= select_tag 'recipients', recipients_options(@chosen_recipient), multiple: true, class: 'form-control chosen-it' %>
     </div>
   
-    <%= submit_tag 'Send', class: 'btn btn-primary' %>
+    <%= submit_tag 'Nibble it!', class: 'btn btn-primary' %>
   <% end %>
 </div>

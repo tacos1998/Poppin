@@ -17,6 +17,10 @@ gem 'turbolinks',   '2.3.0'
 gem 'jbuilder',     '2.2.3'
 gem 'socialization'
 gem 'jquery-atwho-rails'
+gem 'mailboxer'
+gem 'chosen-rails'
+gem 'jquery-turbolinks'
+gem 'gravatar_image_tag'
 gem 'sdoc',         '0.4.0', group: :doc
 
 group :development, :test do

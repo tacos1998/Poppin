@@ -13,4 +13,7 @@
  *= require_tree .
  *= require_self
  *= require jquery.atwho
+ *= require ImageSelect.css
  */
+ 
+ @import 'chosen';

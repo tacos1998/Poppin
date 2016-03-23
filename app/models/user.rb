@@ -20,6 +20,7 @@ class User < ActiveRecord::Base
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
   acts_as_liker
   acts_as_mentionable
+  acts_as_messageable
   
   # self.per_page = 8 will limit popper index to macbook viewport height
   # Returns the hash digest of the given string.
@@ -109,6 +110,11 @@ class User < ActiveRecord::Base
   # Returns true if the current user is following the other user.
   def following?(other_user)
     following.include?(other_user)
+  end
+  
+  def mailboxer_email(object)
+   #return the model's email here
+   return email
   end
   
   private

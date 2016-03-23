@@ -596,3 +596,40 @@ span.picture {
   width: 100px;
   border: 0px;
 }
+
+#unread {
+  background: #0bdad7;
+  color: white;
+  font-weight: bold;
+  border-radius: 100px;
+}
+
+.pull-right {
+  padding-top: 28px;
+}
+
+@media(max-width: 564px) {
+  .pull-right {
+    padding-top: 38px;
+  }
+}
+
+.trash-only, .restore-only {
+  margin-top: 11px;
+}
+
+#convo-info {
+  float: left;
+}
+
+.panel-heading {
+  padding: 29px 15px;
+}
+
+.nibble-kernel {
+  margin-top: 23px;
+}
+
+.nibble-btn-inbox {
+  margin-bottom: 10px;
+}

@@ -19,7 +19,7 @@
           <li>
             <a href="/conversations">Nibbles 
               <% if current_user.mailbox.inbox(:unread => true).count(:id, :distinct => true) > 0 %>
-                <span class="badge">
+                <span class="badge" id="unread">
                   <%= current_user.mailbox.inbox(:unread => true).count(:id, :distinct => true) %>
                 </span>
               <% end %>

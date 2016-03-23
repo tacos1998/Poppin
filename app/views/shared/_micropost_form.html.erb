@@ -1,9 +1,9 @@
 <%= form_for(@micropost, html: { multipart: true }) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <%= f.text_area :content, placeholder: "What's poppin?", maxLength: 140 %>
+    <%= f.text_area :content, placeholder: "What's poppin?", maxLength: 200 %>
   </div>
-  <span id="chars">140 characters remaining</span>
+  <span id="chars">200 characters remaining</span>
   <%= f.submit "Pop it!", class: "btn btn-primary" %>
   <!-- <span class="picture">
     <%# f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
@@ -20,7 +20,7 @@
 </script> -->
 
 <script type="text/javascript">
-  var maxLength = 140;
+  var maxLength = 200;
   $('textarea').keyup(function() {
     var length = $(this).val().length;
     var string = " characters remaining"

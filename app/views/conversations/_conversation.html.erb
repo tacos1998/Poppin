@@ -1,6 +1,9 @@
-<li class="list-group-item clearfix">
-  <%= link_to conversation.subject, conversation_path(conversation), class: 'convo-sub' %>
-
+<div class="panel panel-default clearfix">
+  <div class="panel-heading">
+    <%= render 'conversations/participants', conversation: conversation %>
+    <h5 id="convo-title"><%= link_to conversation.subject, conversation_path(conversation), class: 'convo-sub' %></h5>
+  </div>
+  
   <div class="btn-group-vertical pull-right">
     <% if conversation.is_trashed?(current_user) %>
       <%= link_to 'Restore', restore_conversation_path(conversation), class: 'btn btn-xs btn-info restore-only', method: :post %>
@@ -17,10 +20,11 @@
     <% end %>
   </div>
 
-  <p><%= render 'conversations/participants', conversation: conversation %></p>
-
-  <p id="convo-info"><%= conversation.last_message.body %>
-    <small>(<span class="text-muted"><%= conversation.last_message.created_at.strftime("%-d %B %Y, %H:%M:%S") %></span>)</small>
-    <br><%= link_to conversation.last_message.sender.name, user_path(conversation.last_message.sender.id), method: :get, target: '_blank' %>
+  
+  <div class="panel-body">
+    <p id="convo-info convo-title"><%= conversation.last_message.body %>
+      <small>(<span class="text-muted"><%= conversation.last_message.created_at.strftime("%-d %B %Y, %H:%M:%S") %></span>)</small>
+      <br><%= link_to conversation.last_message.sender.name, user_path(conversation.last_message.sender.id), method: :get, target: '_blank' %>
     </p>
-</li>
+  </div>
+</div>

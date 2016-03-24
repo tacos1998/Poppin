@@ -606,6 +606,7 @@ span.picture {
 
 .pull-right {
   padding-top: 28px;
+  padding-right: 10px;
 }
 
 @media(max-width: 564px) {
@@ -643,6 +644,17 @@ span.picture {
   max-height: 80px;
   min-width: 80px;
   min-height: 80px;
+  overflow: scroll;
+}
+
+.participant-gravatars-two {
+  .gravatar {
+    margin-right: 0px;
+  }
+  max-width: 80px;
+  max-height: 40px;
+  min-width: 80px;
+  min-height: 40px;
   overflow: scroll;
 }
 

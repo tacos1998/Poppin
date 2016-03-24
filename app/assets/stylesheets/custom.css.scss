@@ -623,7 +623,8 @@ span.picture {
 }
 
 .panel-heading {
-  padding: 29px 15px;
+  padding: 0px 0px 0px 0px;
+  display: flex;
 }
 
 .nibble-kernel {
@@ -632,4 +633,25 @@ span.picture {
 
 .nibble-btn-inbox {
   margin-bottom: 10px;
+}
+
+.participant-gravatars {
+  .gravatar {
+    margin-right: 0px;
+  }
+  max-width: 80px;
+  max-height: 80px;
+  min-width: 80px;
+  min-height: 80px;
+  overflow: scroll;
+}
+
+#convo-title {
+  margin-top: 32px;
+  margin-left: 10px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 15px;
 }

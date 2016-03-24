@@ -1,13 +1,10 @@
 <div class="well">
   <h1 id="coolify-title">Nibble</h1>
-  
-  <p>
-    <%= render 'conversations/participants', conversation: @conversation %>
-  </p>
-  
   <div class="panel panel-default">
-    <div class="panel-heading"><%= @conversation.subject %></div>
-  
+    <div class="panel-heading">
+      <%= render 'conversations/participants', conversation: @conversation %>
+      <h5 id="convo-title"><%= @conversation.subject %></h5>
+    </div>
     <div class="panel-body">
       <div>
         <% @conversation.receipts_for(current_user).each do |receipt| %>

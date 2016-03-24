@@ -1,5 +1,7 @@
-<% conversation.participants.each do |participant| %>
-  <% unless participant == current_user %>
-    <%= gravatar_for participant %>
+<div class="participant-gravatars">
+  <% conversation.participants.each do |participant| %>
+    <% unless participant == current_user %>
+      <%= gravatar_for(participant, size: 40) %>
+    <% end %>
   <% end %>
-<% end %>
+</div>

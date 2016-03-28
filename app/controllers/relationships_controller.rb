@@ -1,5 +1,6 @@
 class RelationshipsController < ApplicationController
   before_action :logged_in_user
+  before_action :update_last_seen_timestamp
 
   def create
     @user = User.find(params[:followed_id])

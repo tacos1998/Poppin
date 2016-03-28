@@ -58,6 +58,11 @@ class User < ActiveRecord::Base
     update_attribute(:activated,    true)
     update_attribute(:activated_at, Time.zone.now)
   end
+  
+  # Updates last_seen timestamp.
+  def update_last_seen
+    update_attribute(:last_seen, Time.zone.now)
+  end
 
   # Sends activation email.
   def send_activation_email

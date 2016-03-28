@@ -3,6 +3,7 @@ class ConversationsController < ApplicationController
   before_action :get_mailbox
   before_action :get_conversation, except: [:index, :empty_trash]
   before_action :get_box, only: [:index]
+  before_action :update_last_seen_timestamp
 
   def index
     if @box.eql? "inbox"

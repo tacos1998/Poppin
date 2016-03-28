@@ -59,4 +59,11 @@ module SessionsHelper
   def store_location
     session[:forwarding_url] = request.url if request.get?
   end
+  
+  # Updates last_seen timestamp.
+  def update_last_seen_timestamp
+    if current_user
+      current_user.update_last_seen
+    end
+  end
 end

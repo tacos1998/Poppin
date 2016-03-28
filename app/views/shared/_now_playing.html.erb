@@ -5,7 +5,7 @@
   </button>
   <div class="user_avatars_savor dropdown-menu dropdown-menu-form" aria-labelledby="dropdownMenu2">
     <% User.all.each do |user| %>
-      <% if user.last_seen? && user.last_seen < 5.minutes.ago %>
+      <% if user.last_seen? && user.last_seen > 5.minutes.ago %>
         <%= link_to gravatar_for(user, size: 30), user %>
       <% end %>
     <% end %>

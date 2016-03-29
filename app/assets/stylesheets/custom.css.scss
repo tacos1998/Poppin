@@ -139,7 +139,7 @@ h1 span {
 
 .title {
   position: relative;
-  top: 20px;
+  top: 12px;
 }
 
 .jumbotron h1 {
@@ -629,7 +629,7 @@ span.picture {
 }
 
 .nibble-kernel {
-  margin-top: 23px;
+  margin-top: 16px;
 }
 
 .nibble-btn-inbox {
@@ -707,4 +707,8 @@ span.picture {
 		-ms-animation: none !important;
 		animation: none !important;
 	}
+}
+
+#popbox-link {
+  margin-top: 20px;
 }

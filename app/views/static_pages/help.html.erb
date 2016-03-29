@@ -5,20 +5,45 @@
     <a href="https://youtu.be/5kHQ0AhkDnU?t=6" target="_blank">(I need somebody!)</a>
   </h2>
   
+  <h3>Welcome to Poppin!</h3>
+  
   <p>
-    To get started with Poppin, visit 
-    the <%= link_to "signup page", new_user_path %> 
-    and create your account. You should recieve a confirmation email that 
-    contains your activation link. Click on the link and you'll be directed to 
-    your Kernel.
+    Hello! This guide will show you the in's and out's of Poppin. Let's begin 
+    by getting you familiar with the basic site layout.
   </p>
   
   <p>
-    Poppin uses <a href="https://en.gravatar.com/" target="_blank">Gravatar</a> to manage 
-    profile pictures. Simply create a Gravatar/Wordpress account with your email 
-    (the same one you use with Poppin), link an image, 
-    and <i><strong>voila!</strong></i> 
-    Poppin automagically updates your account with the picture!
+    At the top of your screen is the <strong>Navbar</strong>. It contains the 
+    stylish Poppin logo (click it to return home at any time), as well as links 
+    to the <strong>Home</strong> and <strong>Help</strong> pages. If you haven't logged in, there will be a 
+    <strong>Pop in</strong> link for you to do so. If you have logged in, there will be an 
+    <strong>Account</strong> dropdown menu, with links to view your 
+    <strong>Kernel</strong> (more on that later), edit your account 
+    <strong>Settings</strong>, or log out (<strong>Pop out</strong>).
+  </p>
+  
+  <p>
+    At the bottom of your screen is the footer, which has 
+    links to the <strong>About</strong>, <strong>contact</strong>, 
+    and <strong>Other</strong> pages. There's also a shiny button, 
+    I wonder what would happen if you clicked on it?...
+  </p>
+  
+  <h3>Getting Started</h3>
+  
+  <p>
+    Before you create an Poppin account, you should use <a href="https://en.gravatar.com/" target="_blank">Gravatar</a> 
+    to link a profile picture with your email address. Simply create a Gravatar/Wordpress account with your email 
+    (the same one you'll use for your Poppin account), check your inbox for an 
+    activation link, click it, select an image, and you'll be ready to go.
+  </p>
+  
+  <p>
+    To create your account, visit 
+    the <%= link_to "signup page", new_user_path, target: '_blank' %> and enter 
+    a username, email, and password. Once you hit the submit button, you should recieve a new confirmation email that 
+    contains your Poppin activation link. Check your inbox, click on the link in the email, and you'll be directed to 
+    your Kernel.
   </p>
   
   <p>

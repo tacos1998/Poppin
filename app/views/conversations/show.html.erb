@@ -5,7 +5,7 @@
       <%= render 'conversations/participants', conversation: @conversation %>
       <h5 id="convo-title"><%= @conversation.subject %></h5>
     </div>
-    <div class="panel-body">
+    <div class="panel-body" id="refreshable">
       <div>
         <% @conversation.receipts_for(current_user).each do |receipt| %>
           <p>
@@ -34,4 +34,11 @@
     data = <%= raw User.pluck(:name).compact.to_json %>;
     $('textarea').atwho({at:"@", 'data':data });
 });
+</script>
+
+<!--make feed refreshable -->
+<script>
+  setInterval( function() {
+    $("#refreshable").load(location.href+" #refreshable>*", "");
+  }, 10000);
 </script>

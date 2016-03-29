@@ -1,12 +1,12 @@
-<div class="well">
+<div class="well animated fadeIn">
   <div class="center">
-    <h1 id="coolify-title">My Nibbles</h1>
-    <%= link_to 'Create a new Nibble', new_message_path, class: 'btn btn-md btn-primary nibble-btn-inbox' %>
+    <h1 id="coolify-title" class="animated zoomInDown">My Nibbles</h1>
+    <%= link_to 'Create a new Nibble', new_message_path, class: 'btn btn-md btn-primary nibble-btn-inbox animated bounce' %>
   </div>
   
   <div class="row">
     <div class="col-sm-3">
-      <ul class="nav nav-pills nav-stacked">
+      <ul class="nav nav-pills nav-stacked animated bounceInUp">
         <%= mailbox_section 'inbox', @box %>
         <%= mailbox_section 'sent', @box %>
         <%= mailbox_section 'trash', @box %>
@@ -19,13 +19,13 @@
           <p><%= link_to 'Empty trash', empty_trash_conversations_path, class: 'btn btn-danger', method: :delete,
                          data: {confirm: 'Are you sure?'} %></p>
         <% end %>
-        <ul class="list-group">
+        <ul class="list-group animated bounceInRight">
           <%= render partial: 'conversations/conversation', collection: @conversations %>
         </ul>
       
         <%= will_paginate %>
       <% else %>
-        <div class="well">
+        <div class="well animated bounceInRight">
           <h1>This mailbox is empty.</h1>
           <h2>Move along, nothing to see here.</h2>
         </div>

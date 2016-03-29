@@ -1,6 +1,6 @@
 <% if logged_in? %>
-  <div class="well row main">
-    <aside class="col-md-4">
+  <div class="well row main animated fadeIn">
+    <aside class="col-md-4 animated bounceInUp">
       <section class="user_info">
         <%= render 'shared/user_info' %>
       </section>
@@ -12,13 +12,13 @@
       </section>
     </aside>
     <div class="well col-md-8">
-      <h3 id="popbox">Pop Box <%= render 'shared/now_playing' %></h3>
+      <h3 id="popbox" class="animated bounce">Pop Box <%= render 'shared/now_playing' %></h3>
       <%= render 'shared/feed' %>
     </div>
   </div>
 <% else %>
-  <div class="center jumbotron">
-    <h1 id="coolify">POPPIN</h1>
+  <div class="center jumbotron animated bounceInUp">
+    <h1 id="coolify" class="animated zoomInDown">POPPIN</h1>
 
     <h2>
       Pop your thoughts. Crunch your friends. Add salt to taste.

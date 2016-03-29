@@ -21,6 +21,7 @@ gem 'mailboxer'
 gem 'chosen-rails'
 gem 'jquery-turbolinks'
 gem 'gravatar_image_tag'
+gem 'animate-rails'
 gem 'sdoc',         '0.4.0', group: :doc
 
 group :development, :test do

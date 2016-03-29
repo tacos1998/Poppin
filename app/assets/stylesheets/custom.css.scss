@@ -40,6 +40,7 @@ section {
   overflow: auto;
   .popbox {
     position: relative;
+    z-index: 10;
     top: 20px;
   }
 }

@@ -1,10 +1,10 @@
 <% provide(:title, @title) %>
-<div class="well row">
+<div class="well row animated bounceInUp">
   <aside class="col-md-4">
     <section class="user_info">
       <%= gravatar_for @user %>
       <span class="lower">
-        <h1 id="coolify-title"><%= @user.name %></h1>
+        <h1 id="coolify-title" class="animated zoomInDown"><%= @user.name %></h1>
         <span><%= link_to "view my Kernel", @user %></span>
         <span><b>Pops:</b> <%= @user.microposts.count %></span>
       </span>

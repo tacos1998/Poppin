@@ -1,6 +1,6 @@
 <% provide(:title, "Help") %>
-<div class="well">
-  <h1 id="coolify-title">Help</h1>
+<div class="well animated bounceInUp">
+  <h1 id="coolify-title" class="animated zoomInDown">Help</h1>
   <h2>
     <a href="https://youtu.be/5kHQ0AhkDnU?t=6" target="_blank">(I need somebody!)</a>
   </h2>
@@ -16,23 +16,31 @@
     At the top of your screen is the <strong>Navbar</strong>. It contains the 
     stylish Poppin logo (click it to return home at any time), as well as links 
     to the <strong>Home</strong> and <strong>Help</strong> pages. If you haven't logged in, there will be a 
-    <strong>Pop in</strong> link for you to do so. If you have logged in, there will be an 
+    <strong>Pop in</strong> link for you to do so. If you have logged in, there 
+    will also be links to <strong>The Popper</strong> and your <strong>Nibbles</strong> (keep reading), 
+    as well as the
     <strong>Account</strong> dropdown menu, with links to view your 
     <strong>Kernel</strong> (more on that later), edit your account 
     <strong>Settings</strong>, or log out (<strong>Pop out</strong>).
   </p>
   
   <p>
+    If you're using Poppin on a mobile device (or other small screen), 
+    the aforementioned links will be replaced with a button. Tap/click it to expand 
+    the navbar in dropdown form.
+  </p>
+  
+  <p>
     At the bottom of your screen is the footer, which has 
-    links to the <strong>About</strong>, <strong>contact</strong>, 
-    and <strong>Other</strong> pages. There's also a shiny button, 
+    links to the <strong>About</strong>, <strong>Contact</strong>, 
+    and <strong>Other</strong> pages. There's also a shiny gold button, 
     I wonder what would happen if you clicked on it?...
   </p>
   
   <h3>Getting Started</h3>
   
   <p>
-    Before you create an Poppin account, you should use <a href="https://en.gravatar.com/" target="_blank">Gravatar</a> 
+    Before you create an Poppin account, you should use <strong><a href="https://en.gravatar.com/" target="_blank">Gravatar</a></strong> 
     to link a profile picture with your email address. Simply create a Gravatar/Wordpress account with your email 
     (the same one you'll use for your Poppin account), check your inbox for an 
     activation link, click it, select an image, and you'll be ready to go.
@@ -40,31 +48,74 @@
   
   <p>
     To create your account, visit 
-    the <%= link_to "signup page", new_user_path, target: '_blank' %> and enter 
+    the <strong><%= link_to "signup page", new_user_path, target: '_blank' %></strong> and enter 
     a username, email, and password. Once you hit the submit button, you should recieve a new confirmation email that 
     contains your Poppin activation link. Check your inbox, click on the link in the email, and you'll be directed to 
     your Kernel.
   </p>
   
   <p>
-    Your Kernel is your profile page. It displays your name, Gravatar, and all 
-    of your Pops, along with a button at the top for people to Crunch or 
-    Uncrunch you. This is what other users will see when they click on you. 
+    Your <strong>Kernel</strong> is your profile page. It displays your username, Gravatar, and all 
+    of your <strong>Pops</strong>, along with a button at the top for people to <strong>Crunch</strong> or 
+    <strong>Uncrunch</strong> you. This is what other users will see when they click on you. 
     Once you've logged in, you can view your Kernel by clicking the 
-    "My Kernel" link in the navbar's Account dropdown menu (top right corner).
+    <strong>My Kernel</strong> link in the navbar's Account dropdown menu (top right corner).
   </p>
   
   <p>
-    Your Pop Box can be accessed by clicking the Poppin logo (top left corner) 
-    or the "Home" link in the navbar once you've logged in. This is where you 
+    Once you've activated your account and logged in, navigate to the Home page 
+    (click the Poppin logo or the Home link in the navbar) to view your 
+    <strong>Pop Box</strong>. This is where you 
     can Pop and view a feed of Pops from yourself and from the users you're 
-    crunching. Pops are limited to 200 characters.
+    crunching. There's also a <strong>Now Playing</strong> button that will display 
+    the Gravatars/Kernel links of all online users.
+  </p>
+  
+  <p>
+    <strong>Pops</strong> are the heart and soul of Poppin. You can Pop whatever you like, as 
+    long as you stay under 200 characters and follow <%= link_to "the rules", about_path %>. 
+    <br><i>Protip: type the @ symbol in the Pop textbox to bring up a menu of usernames (if you want to mention people in your Pop).</i>
   </p>
   
   <p>
     If you find a Pop from another user that you particularly enjoy, you 
-    should Savor it! Just hit that Savor button and that Pop's Savor count will 
-    increase.
+    should <strong>Savor</strong> it! Just hit that Savor button and that Pop's Savor count will 
+    increase. Also, your Gravatar (which links to your Kernel) will be added 
+    to the list of Savorers (which can be accessed by clicking the "# savors" button).
+  </p>
+  
+  <p>
+    <strong>The Popper</strong> (link is in the navbar if you've logged in) is a 
+    roster of all activated users. Click on a user to view their Kernel. Near 
+    the top of the page is a button for you to <strong>Crunch</strong> (follow) the user so that their Pops 
+    will show up in your Pop Box, or to <strong>Uncrunch</strong> (unfollow) 
+    the user if you're already Crunching them.
+  </p>
+  
+  <p>
+    Also displayed in the Kernel is a curious-looking <strong>Nibble</strong> buttton. 
+    Nibble is Poppin's private messaging system. The main Nibble menu can be accessed 
+    via the Nibble link in the navbar. This menu consists of three folders: 
+    the inbox, which shows all active Nibbles (from here you can mark a Nibble 
+    as read or move it to the trash); the sent folder, which displays 
+    all sent Nibbles; and the trash folder, which includes all trashed nibbles (and 
+    a button to empty the trash and delete them permanently). The number of 
+    unread Nibbles (if any) will be displayed alongside the Nibbles link in the navbar.
+  </p>
+  
+  <p>
+    Nibbles can only be 
+    viewed by the sender and recipient(s). You can specify as many recipients as you like, 
+    and (unlike Pops) there is no character limit. And (rewinding to what was said earlier) 
+    clicking the Nibble button on a user's Kernel will compose a new Nibble with 
+    the user as the recipient. You will recieve an email notification whenever you 
+    are Nibbled or whenever someone replies to one of your Nibbles.
+  </p>
+  
+  <p>
+    In general, if you have a short thought that you want to express to everyone, Pop it! 
+    If you want to direct a longer message towards a specific person or group 
+    of people, Nibble it!
   </p>
   
   <p>

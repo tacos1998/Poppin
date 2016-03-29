@@ -1,28 +1,28 @@
 <% provide(:title, "Edit user") %>
-<div class="well">
-  <h1 id="coolify-title">Update your account</h1>
+<div class="well animated fadeIn">
+  <h1 id="coolify-title" class="animated zoomInDown">Update your account</h1>
   
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <%= form_for(@user) do |f| %>
         <%= render 'shared/error_messages', object: f.object %>
   
-        <%= f.label :name %>
-        <%= f.text_field :name, class: 'form-control' %>
+        <%= f.label :name, class: 'animated bounce' %>
+        <%= f.text_field :name, class: 'form-control animated bounceInLeft' %>
   
-        <%= f.label :email %>
-        <%= f.email_field :email, class: 'form-control' %>
+        <%= f.label :email, class: 'animated bounce' %>
+        <%= f.email_field :email, class: 'form-control animated bounceInRight' %>
   
-        <%= f.label :password %>
-        <%= f.password_field :password, class: 'form-control' %>
+        <%= f.label :password, class: 'animated bounce' %>
+        <%= f.password_field :password, class: 'form-control animated bounceInLeft' %>
   
-        <%= f.label :password_confirmation, "Confirm Password" %>
-        <%= f.password_field :password_confirmation, class: 'form-control' %>
+        <%= f.label :password_confirmation, class: 'animated bounce' "Confirm Password" %>
+        <%= f.password_field :password_confirmation, class: 'form-control animated bounceInRight' %>
   
-        <%= f.submit "Save changes", class: "btn btn-primary" %>
+        <%= f.submit "Save changes", class: "btn btn-primary animated bounceInUp" %>
       <% end %>
       
-      <div class="gravatar_edit">
+      <div class="gravatar_edit animated bounceInUp">
         <span>Your current profile picture.</span>
         <%= gravatar_for @user %>
         <a href="http://gravatar.com/emails">Click to change</a>

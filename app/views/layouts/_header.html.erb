@@ -16,7 +16,7 @@
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "Help", help_path %></li>
         <% if logged_in? %>
-          <li>
+          <li id="refreshy">
             <a href="/conversations">Nibbles 
               <% if current_user.mailbox.inbox(:unread => true).count(:id, :distinct => true) > 0 %>
                 <span class="badge" id="unread">
@@ -46,3 +46,10 @@
     </div>
   </div>
 </nav>
+
+<!--make feed refreshable -->
+<script>
+  setInterval( function() {
+    $("#refreshy").load(" #refreshy>*", "");
+  }, 30000);
+</script>

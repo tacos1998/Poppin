@@ -4,7 +4,7 @@
   <%= form_tag messages_path, method: :post do %>
     <div class="form-group">
       <%= label_tag 'message[subject]', 'Subject' %>
-      <%= text_field_tag 'message[subject]', nil, class: 'form-control', required: true, placeholder: "(optional)" %>
+      <%= text_field_tag 'message[subject]', nil, class: 'form-control', required: true, placeholder: "(words go here)" %>
     </div>
   
     <div class="form-group">
@@ -14,7 +14,7 @@
   
     <div class="form-group">
       <%= label_tag 'recipients', 'Choose recipients' %>
-      <%= select_tag 'recipients', recipients_options(@chosen_recipient), multiple: true, class: 'form-control chosen-it' %>
+      <%= select_tag 'recipients', recipients_options(@chosen_recipient), required: true, multiple: true, class: 'form-control chosen-it' %>
     </div>
   
     <%= submit_tag 'Nibble it!', class: 'btn btn-primary' %>

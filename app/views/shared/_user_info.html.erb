@@ -1,4 +1,4 @@
-<%= link_to gravatar_for(current_user, size: 55), current_user %>
+<%= link_to gravatar_for(current_user, size: 55), "https://en.gravatar.com/site/login", target: "_blank" %>
 <h1 id="coolify-title"><%= current_user.name %></h1>
 <span><%= link_to "view my Kernel", current_user %></span>
 <span><%= pluralize(current_user.microposts.count, "pop") %></span>

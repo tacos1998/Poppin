@@ -7,7 +7,7 @@
     </div>
     <div class="panel-body" id="refreshable">
       <div>
-        <% @conversation.receipts_for(current_user).each do |receipt| %>
+        <% @conversation.receipts_for(current_user).order(:created_at).each do |receipt| %>
           <p>
             <% message = receipt.message %>
     

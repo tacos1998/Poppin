@@ -1,7 +1,7 @@
 
 # Poppin
 
-Poppin is the most delicious social network on the internets.
+Poppin: the tastiest social network on the internet.
 
 This is my version of the sample application for the
 [*Ruby on Rails Tutorial:
